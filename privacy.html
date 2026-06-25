@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Wello Health Technologies</title>
+  <meta name="description" content="Wello's privacy policy — how we collect, use, and protect your health data. We will never sell your data. Ever." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .legal-hero { padding: 5rem 0 4rem; border-bottom: 1px solid var(--border); }
+    .legal-hero-title { font-size: clamp(2.5rem, 5.5vw, 4rem); letter-spacing: .015em; line-height: 1.1; max-width: 680px; margin-bottom: 1.25rem; }
+    .legal-hero-sub { font-size: 1rem; color: var(--muted); line-height: 1.75; max-width: 500px; }
+    .legal-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 2rem; }
+    .legal-meta-item { display: flex; align-items: center; gap: .5rem; font-size: .8125rem; color: var(--muted); font-weight: 500; }
+    .legal-meta-item [data-lucide] { width: 14px; height: 14px; color: var(--primary); }
+    /* Layout */
+    .legal-layout { display: grid; grid-template-columns: 1fr; gap: 4rem; padding: 5rem 0; }
+    @media (min-width: 1024px) { .legal-layout { grid-template-columns: 240px 1fr; gap: 6rem; } }
+    /* Sidebar nav */
+    .legal-nav { position: sticky; top: calc(var(--nav-h) + 2rem); align-self: start; }
+    .legal-nav-title { font-size: 10px; text-transform: uppercase; letter-spacing: .15em; font-weight: 700; color: var(--muted); margin-bottom: 1rem; }
+    .legal-nav-list { list-style: none; display: flex; flex-direction: column; gap: .25rem; }
+    .legal-nav-list a { font-size: .875rem; color: var(--muted); padding: .5rem .75rem; border-radius: .5rem; display: block; transition: background .2s, color .2s; }
+    .legal-nav-list a:hover { background: var(--secondary); color: var(--fg); }
+    /* Content */
+    .legal-content { max-width: 720px; }
+    .legal-section { margin-bottom: 3.5rem; padding-bottom: 3.5rem; border-bottom: 1px solid var(--border); }
+    .legal-section:last-child { border-bottom: none; }
+    .legal-section h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1.25rem; scroll-margin-top: calc(var(--nav-h) + 2rem); }
+    .legal-section p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; font-size: .9375rem; }
+    .legal-section ul { color: var(--muted); line-height: 1.8; font-size: .9375rem; padding-left: 1.25rem; display: flex; flex-direction: column; gap: .5rem; margin-bottom: 1rem; }
+    .legal-section h3 { font-family: var(--sans); font-size: 1rem; font-weight: 700; letter-spacing: .01em; margin: 1.75rem 0 .75rem; color: var(--fg); }
+    /* Highlight box */
+    .legal-highlight {
+      background: var(--secondary);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--primary);
+      border-radius: .75rem;
+      padding: 1.25rem 1.5rem;
+      font-size: .9375rem;
+      color: var(--fg);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+    .legal-highlight strong { color: var(--fg); }
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Wello</a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="features.html" class="nav-link">Features</a>
+      <a href="science.html" class="nav-link">The Science</a>
+      <a href="buy.html" class="nav-cta">Buy — Rs 59,990</a>
+    </div>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><i data-lucide="menu"></i></button>
+  </div>
+</nav>
+<div class="nav-mobile">
+  <a href="index.html">Home</a>
+  <a href="features.html">Features</a>
+  <a href="science.html">The Science</a>
+  <a href="buy.html">Buy — Rs 59,990</a>
+</div>
+
+<section class="legal-hero">
+  <div class="container">
+    <span class="eyebrow">Legal</span>
+    <h1 class="legal-hero-title">Privacy Policy</h1>
+    <p class="legal-hero-sub">We built Wello because we believe your health data belongs to you — not to advertisers, data brokers, or anyone else. This policy explains exactly what we collect, why, and how we protect it.</p>
+    <div class="legal-meta">
+      <div class="legal-meta-item"><i data-lucide="calendar"></i> Effective: 1 June 2026</div>
+      <div class="legal-meta-item"><i data-lucide="refresh-cw"></i> Last updated: 1 June 2026</div>
+      <div class="legal-meta-item"><i data-lucide="map-pin"></i> Jurisdiction: Pakistan</div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="legal-layout">
+    <!-- Sidebar -->
+    <aside class="legal-nav">
+      <div class="legal-nav-title">On this page</div>
+      <ul class="legal-nav-list">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#data-we-collect">Data we collect</a></li>
+        <li><a href="#how-we-use">How we use your data</a></li>
+        <li><a href="#sharing">Data sharing</a></li>
+        <li><a href="#storage">Storage &amp; security</a></li>
+        <li><a href="#your-rights">Your rights</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#changes">Changes</a></li>
+        <li><a href="#contact-privacy">Contact us</a></li>
+      </ul>
+    </aside>
+
+    <!-- Content -->
+    <main class="legal-content">
+      <div class="legal-section" id="overview">
+        <h2>Overview</h2>
+        <div class="legal-highlight"><strong>The short version:</strong> Wello collects your health data to generate your daily scores. We never sell it, never share it with advertisers, and you can delete everything at any time.</div>
+        <p>This Privacy Policy describes how Wello Health Technologies Pvt. Ltd. ("Wello", "we", "us", or "our") collects, uses, stores, and shares information from users of the Wello health band and the Wello mobile application (collectively, the "Service").</p>
+        <p>By using our Service, you agree to the practices described in this policy. If you do not agree, please discontinue use of the Service.</p>
+      </div>
+
+      <div class="legal-section" id="data-we-collect">
+        <h2>Data we collect</h2>
+        <h3>Health &amp; biometric data</h3>
+        <p>The Wello band automatically collects the following data from your body while worn:</p>
+        <ul>
+          <li>Heart rate (continuous optical PPG)</li>
+          <li>Heart rate variability (HRV) measured during deep sleep</li>
+          <li>Blood oxygen saturation (SpO2)</li>
+          <li>Skin surface temperature</li>
+          <li>Respiration rate (derived from PPG)</li>
+          <li>Movement and activity data (accelerometer/gyroscope)</li>
+          <li>Bioimpedance measurements for body composition estimates</li>
+          <li>Sleep stages (Deep, REM, Light, Awake) derived from sensor fusion</li>
+          <li>Ambient light exposure</li>
+        </ul>
+        <h3>Account data</h3>
+        <p>When you create a Wello account, we collect:</p>
+        <ul>
+          <li>Name and email address</li>
+          <li>Age, biological sex, height, and weight (used to personalise baselines)</li>
+          <li>Country and time zone</li>
+          <li>Device identifier and firmware version</li>
+        </ul>
+        <h3>Purchase data</h3>
+        <p>Order information, shipping address, and payment confirmation. Payment card details are processed directly by our payment provider and never stored on Wello servers.</p>
+        <h3>App usage data</h3>
+        <p>Anonymised crash reports, feature usage frequency, and app performance metrics. This data cannot be linked to your health data.</p>
+      </div>
+
+      <div class="legal-section" id="how-we-use">
+        <h2>How we use your data</h2>
+        <p>We use your data solely to provide and improve the Wello Service:</p>
+        <ul>
+          <li><strong>Generate your daily scores</strong> — Recovery, Sleep, and HRV scores are computed on your device and/or on our servers using your biometric data.</li>
+          <li><strong>Personalise your baselines</strong> — We use your historical data to build personal baselines that make your scores accurate to you specifically.</li>
+          <li><strong>Improve our algorithms</strong> — With explicit opt-in consent, anonymised and aggregated data may be used to improve our scoring models. You may opt out at any time.</li>
+          <li><strong>Send you updates</strong> — Transactional emails (order confirmation, firmware updates). Marketing emails only with your explicit consent.</li>
+          <li><strong>Provide customer support</strong> — When you contact us, we may access your account data to diagnose issues.</li>
+        </ul>
+        <p>We do <strong>not</strong> use your health data for advertising targeting, insurance scoring, employment screening, or any purpose not listed above.</p>
+      </div>
+
+      <div class="legal-section" id="sharing">
+        <h2>Data sharing</h2>
+        <div class="legal-highlight"><strong>We will never sell your health data.</strong> We share data only in the limited circumstances below.</div>
+        <h3>Service providers</h3>
+        <p>We use third-party services to operate the platform — cloud hosting (encrypted at rest), email delivery, and payment processing. These vendors are contractually prohibited from using your data for any other purpose.</p>
+        <h3>Legal requirements</h3>
+        <p>We may disclose information if required by Pakistani law or a valid court order. We will notify you if legally permitted to do so.</p>
+        <h3>Business transfers</h3>
+        <p>If Wello is acquired or merged with another company, your data will transfer to the new entity under the same or stronger privacy protections. You will be notified of any such change.</p>
+        <h3>With your consent</h3>
+        <p>If you choose to share data with a third-party health platform (e.g., Apple Health, Google Fit), data is shared only as you direct and governed by that platform's privacy policy.</p>
+      </div>
+
+      <div class="legal-section" id="storage">
+        <h2>Storage &amp; security</h2>
+        <p>Your data is stored on encrypted servers located in Germany (Frankfurt region). We use AES-256 encryption at rest and TLS 1.3 in transit.</p>
+        <p>Your raw biometric data is processed on the device where possible. Only derived scores and anonymised signals are transmitted to our servers by default.</p>
+        <p>We retain your data for as long as your account is active, plus 30 days after deletion to support recovery requests. After that, all data is permanently purged.</p>
+        <p>We perform regular security audits and penetration testing. If a breach affects your personal data, we will notify you within 72 hours of discovery.</p>
+      </div>
+
+      <div class="legal-section" id="your-rights">
+        <h2>Your rights</h2>
+        <p>You have the following rights regarding your data, exercisable at any time through the Wello app or by emailing privacy@wello.health:</p>
+        <ul>
+          <li><strong>Access</strong> — Download a full export of all data we hold about you.</li>
+          <li><strong>Correction</strong> — Correct any inaccurate personal information.</li>
+          <li><strong>Deletion</strong> — Delete your account and all associated health data permanently.</li>
+          <li><strong>Portability</strong> — Receive your data in a machine-readable format (JSON or CSV).</li>
+          <li><strong>Restriction</strong> — Request that we stop processing specific data categories.</li>
+          <li><strong>Opt-out</strong> — Opt out of anonymised research use at any time in App → Settings → Privacy.</li>
+        </ul>
+        <p>We will fulfill all requests within 14 business days.</p>
+      </div>
+
+      <div class="legal-section" id="children">
+        <h2>Children</h2>
+        <p>The Wello Service is not directed at individuals under the age of 16. We do not knowingly collect personal information from children under 16. If you believe we have inadvertently collected such data, please contact us immediately at privacy@wello.health and we will delete it promptly.</p>
+      </div>
+
+      <div class="legal-section" id="changes">
+        <h2>Changes to this policy</h2>
+        <p>We may update this Privacy Policy occasionally. We will notify you of material changes via email and in-app notification at least 30 days before they take effect. Continued use of the Service after that period constitutes acceptance of the updated policy.</p>
+        <p>The current effective date is always shown at the top of this document.</p>
+      </div>
+
+      <div class="legal-section" id="contact-privacy">
+        <h2>Contact us</h2>
+        <p>If you have questions, concerns, or requests regarding your privacy, please contact our Data Protection Officer:</p>
+        <ul>
+          <li><strong>Email:</strong> privacy@wello.health</li>
+          <li><strong>Post:</strong> Data Protection Officer, Wello Health Technologies Pvt. Ltd., DHA Phase 5, Lahore, Punjab 54792, Pakistan</li>
+        </ul>
+        <p>We aim to respond to all privacy enquiries within 5 business days.</p>
+      </div>
+    </main>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><span class="footer-logo">Wello</span><p class="footer-desc">Health intelligence without the screen. A medical-grade wellness band for people who want to understand their bodies, not just count their steps.</p></div>
+      <div><h5>Product</h5><ul><li><a href="features.html">Features</a></li><li><a href="science.html">The Science</a></li><li><a href="buy.html">Buy Now</a></li></ul></div>
+      <div><h5>Company</h5><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Sale</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Wello Health Technologies Pvt. Ltd. All rights reserved.</span>
+      <span>Made in Pakistan</span>
+    </div>
+  </div>
+</footer>
+<script src="https://unpkg.com/lucide@0.427.0/dist/umd/lucide.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

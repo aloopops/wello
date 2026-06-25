@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Wello Health Technologies</title>
+  <meta name="description" content="Get in touch with the Wello team. We're here to help with pre-purchase questions, shipping, returns, and anything else." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .contact-hero { padding: 5rem 0 4rem; border-bottom: 1px solid var(--border); }
+    .contact-hero-title { font-size: clamp(2.75rem, 6vw, 4.5rem); letter-spacing: .015em; line-height: 1.08; max-width: 640px; margin-bottom: 1.5rem; }
+    .contact-hero-sub { font-size: 1.0625rem; color: var(--muted); line-height: 1.75; max-width: 480px; }
+    .contact-grid { display: grid; grid-template-columns: 1fr; gap: 4rem; }
+    @media (min-width: 1024px) { .contact-grid { grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; } }
+    /* Contact form */
+    .contact-form-wrap { display: flex; flex-direction: column; gap: 1.25rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } }
+    .form-group { display: flex; flex-direction: column; gap: .5rem; }
+    .form-group label { font-size: .8125rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: var(--secondary);
+      border: 1.5px solid var(--border);
+      border-radius: .75rem;
+      padding: .875rem 1rem;
+      font-size: .9375rem;
+      color: var(--fg);
+      outline: none;
+      transition: border-color .2s;
+      width: 100%;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--primary); }
+    .form-group textarea { resize: vertical; min-height: 140px; }
+    .contact-submit {
+      display: inline-flex; align-items: center; gap: .6rem;
+      background: var(--fg); color: var(--bg);
+      border: none; border-radius: 999px;
+      padding: 1rem 2rem;
+      font-size: 12px; text-transform: uppercase; letter-spacing: .12em; font-weight: 600;
+      cursor: pointer;
+      transition: background .2s, transform .15s;
+      align-self: flex-start;
+    }
+    .contact-submit:hover { background: hsl(20,8%,20%); transform: translateY(-1px); }
+    .contact-submit [data-lucide] { width: 14px; height: 14px; }
+    /* Info cards */
+    .contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
+    .contact-info-card {
+      background: var(--secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      transition: box-shadow .3s;
+    }
+    .contact-info-card:hover { box-shadow: var(--shadow-md); }
+    .contact-info-icon {
+      width: 48px; height: 48px; flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--primary);
+    }
+    .contact-info-icon [data-lucide] { width: 20px; height: 20px; stroke-width: 1.5; }
+    .contact-info-title { font-size: 1rem; font-weight: 600; margin-bottom: .35rem; }
+    .contact-info-text { font-size: .875rem; color: var(--muted); line-height: 1.6; }
+    .contact-info-link { font-size: .875rem; color: var(--primary); font-weight: 600; margin-top: .35rem; display: inline-block; }
+    /* Response time badge */
+    .response-badge {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: var(--secondary); border: 1px solid var(--border);
+      border-radius: 999px; padding: .4rem 1rem;
+      font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em;
+      color: var(--muted); margin-top: 2.5rem;
+    }
+    .response-dot { width: 6px; height: 6px; border-radius: 50%; background: hsl(145, 50%, 45%); }
+    /* Success message */
+    .contact-success {
+      display: none;
+      background: var(--secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .contact-success.visible { display: block; }
+    .contact-success h3 { font-size: 1.5rem; margin-bottom: .75rem; }
+    .contact-success p { color: var(--muted); font-size: .9375rem; }
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Wello</a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="features.html" class="nav-link">Features</a>
+      <a href="science.html" class="nav-link">The Science</a>
+      <a href="buy.html" class="nav-cta">Buy — Rs 59,990</a>
+    </div>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><i data-lucide="menu"></i></button>
+  </div>
+</nav>
+<div class="nav-mobile">
+  <a href="index.html">Home</a>
+  <a href="features.html">Features</a>
+  <a href="science.html">The Science</a>
+  <a href="buy.html">Buy — Rs 59,990</a>
+</div>
+
+<section class="contact-hero">
+  <div class="container">
+    <span class="eyebrow">Get in touch</span>
+    <h1 class="contact-hero-title">We'd love to<br /><em>hear from you.</em></h1>
+    <p class="contact-hero-sub">Whether you have a question before buying, need help with your order, or just want to know more about the science — we're here.</p>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="contact-grid">
+      <!-- Form -->
+      <div class="anim-on-scroll">
+        <span class="eyebrow">Send us a message</span>
+        <h2 style="font-size:clamp(1.75rem,3.5vw,2.25rem);margin-bottom:2rem;letter-spacing:.015em;">We reply within<br />24 hours, always.</h2>
+        <form id="contact-form" class="contact-form-wrap" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-name">Your name</label>
+              <input type="text" id="contact-name" name="name" placeholder="Ahmed Raza" required />
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email address</label>
+              <input type="email" id="contact-email" name="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contact-subject">Topic</label>
+            <select id="contact-subject" name="subject">
+              <option value="">Select a topic…</option>
+              <option value="pre-purchase">Pre-purchase question</option>
+              <option value="order">Order &amp; shipping</option>
+              <option value="returns">Returns &amp; refunds</option>
+              <option value="app">App &amp; data</option>
+              <option value="science">Science &amp; health data</option>
+              <option value="press">Press &amp; media</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" placeholder="Tell us how we can help…" required></textarea>
+          </div>
+          <button type="submit" class="contact-submit" id="contact-submit-btn">
+            Send Message
+            <i data-lucide="send"></i>
+          </button>
+        </form>
+        <div class="contact-success" id="contact-success">
+          <i data-lucide="check-circle" style="width:40px;height:40px;color:var(--primary);margin-bottom:1rem;"></i>
+          <h3>Message sent!</h3>
+          <p>Thank you for reaching out. Our team will get back to you within 24 hours.</p>
+        </div>
+      </div>
+
+      <!-- Info -->
+      <div class="contact-info anim-on-scroll">
+        <div class="contact-info-card">
+          <div class="contact-info-icon"><i data-lucide="mail"></i></div>
+          <div>
+            <div class="contact-info-title">Email us</div>
+            <div class="contact-info-text">For all enquiries, our team monitors this inbox every day.</div>
+            <a href="mailto:hello@wello.health" class="contact-info-link">hello@wello.health</a>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-info-icon"><i data-lucide="phone"></i></div>
+          <div>
+            <div class="contact-info-title">Call or WhatsApp</div>
+            <div class="contact-info-text">Available Mon–Fri, 10am–6pm PKT. WhatsApp preferred for fastest response.</div>
+            <a href="tel:+923001234567" class="contact-info-link">+92 300 123 4567</a>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-info-icon"><i data-lucide="map-pin"></i></div>
+          <div>
+            <div class="contact-info-title">Headquarters</div>
+            <div class="contact-info-text">Wello Health Technologies Pvt. Ltd.<br />DHA Phase 5, Lahore, Punjab 54792<br />Pakistan</div>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-info-icon"><i data-lucide="package"></i></div>
+          <div>
+            <div class="contact-info-title">Orders &amp; shipping</div>
+            <div class="contact-info-text">Nationwide delivery in 3–5 business days. International shipping available on request.</div>
+            <a href="buy.html" class="contact-info-link">Place an order →</a>
+          </div>
+        </div>
+        <div class="response-badge">
+          <span class="response-dot"></span>
+          Usually replies within 24 hours
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ strip -->
+<section class="section-pad" style="background:var(--secondary);border-top:1px solid var(--border);">
+  <div class="container-mid">
+    <div class="text-center mb-xl anim-on-scroll">
+      <span class="eyebrow">Common questions</span>
+      <h2 class="section-title" style="font-size:clamp(1.875rem,4vw,2.75rem);">Quick answers.</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:1px;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;" class="anim-on-scroll">
+      <div class="buy-faq-item" style="background:var(--bg);">
+        <button class="buy-faq-q" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:1.5rem 2rem;font-size:1rem;font-weight:600;background:none;border:none;cursor:pointer;text-align:left;font-family:var(--sans);">
+          Do you ship across Pakistan?
+          <i data-lucide="chevron-down" style="width:18px;height:18px;flex-shrink:0;transition:transform .3s;"></i>
+        </button>
+        <div class="buy-faq-a" style="padding:0 2rem 1.5rem;font-size:.9375rem;color:var(--muted);line-height:1.7;display:none;">Yes — we ship nationwide via TCS and Leopards. Delivery typically takes 3–5 business days. Free shipping on all orders.</div>
+      </div>
+      <div class="buy-faq-item" style="background:var(--bg);border-top:1px solid var(--border);">
+        <button class="buy-faq-q" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:1.5rem 2rem;font-size:1rem;font-weight:600;background:none;border:none;cursor:pointer;text-align:left;font-family:var(--sans);">
+          What is your return policy?
+          <i data-lucide="chevron-down" style="width:18px;height:18px;flex-shrink:0;transition:transform .3s;"></i>
+        </button>
+        <div class="buy-faq-a" style="padding:0 2rem 1.5rem;font-size:.9375rem;color:var(--muted);line-height:1.7;display:none;">We offer a 14-day return window on unused devices in original packaging. Devices showing signs of wear or damage are not eligible. See our Terms of Sale for full details.</div>
+      </div>
+      <div class="buy-faq-item" style="background:var(--bg);border-top:1px solid var(--border);">
+        <button class="buy-faq-q" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:1.5rem 2rem;font-size:1rem;font-weight:600;background:none;border:none;cursor:pointer;text-align:left;font-family:var(--sans);">
+          Is there a warranty?
+          <i data-lucide="chevron-down" style="width:18px;height:18px;flex-shrink:0;transition:transform .3s;"></i>
+        </button>
+        <div class="buy-faq-a" style="padding:0 2rem 1.5rem;font-size:.9375rem;color:var(--muted);line-height:1.7;display:none;">Yes. Every Wello band comes with a 12-month manufacturing warranty covering hardware defects. This does not cover physical damage or water damage beyond rated IP limits.</div>
+      </div>
+      <div class="buy-faq-item" style="background:var(--bg);border-top:1px solid var(--border);">
+        <button class="buy-faq-q" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:1.5rem 2rem;font-size:1rem;font-weight:600;background:none;border:none;cursor:pointer;text-align:left;font-family:var(--sans);">
+          Do you offer bulk or corporate orders?
+          <i data-lucide="chevron-down" style="width:18px;height:18px;flex-shrink:0;transition:transform .3s;"></i>
+        </button>
+        <div class="buy-faq-a" style="padding:0 2rem 1.5rem;font-size:.9375rem;color:var(--muted);line-height:1.7;display:none;">Yes — we offer special pricing and custom onboarding for corporate wellness programs and bulk orders of 10+ units. Email us at hello@wello.health with your requirements.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><span class="footer-logo">Wello</span><p class="footer-desc">Health intelligence without the screen. A medical-grade wellness band for people who want to understand their bodies, not just count their steps.</p></div>
+      <div><h5>Product</h5><ul><li><a href="features.html">Features</a></li><li><a href="science.html">The Science</a></li><li><a href="buy.html">Buy Now</a></li></ul></div>
+      <div><h5>Company</h5><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Sale</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Wello Health Technologies Pvt. Ltd. All rights reserved.</span>
+      <span>Made in Pakistan</span>
+    </div>
+  </div>
+</footer>
+<script src="https://unpkg.com/lucide@0.427.0/dist/umd/lucide.min.js"></script>
+<script src="script.js"></script>
+<script>
+(function(){
+  // Contact form
+  var form = document.getElementById('contact-form');
+  var success = document.getElementById('contact-success');
+  if(form && success){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      form.style.display = 'none';
+      success.classList.add('visible');
+      if(window.lucide) window.lucide.createIcons();
+    });
+  }
+  // FAQ accordion
+  document.querySelectorAll('.buy-faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.parentElement;
+      var ans = item.querySelector('.buy-faq-a');
+      var icon = btn.querySelector('[data-lucide]');
+      var isOpen = ans.style.display === 'block';
+      // close all
+      document.querySelectorAll('.buy-faq-a').forEach(function(a){ a.style.display='none'; });
+      document.querySelectorAll('.buy-faq-q [data-lucide]').forEach(function(i){ i.style.transform=''; });
+      if(!isOpen){
+        ans.style.display = 'block';
+        if(icon) icon.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

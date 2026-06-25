@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buy Wello — Rs 59,990</title>
+  <meta name="description" content="Order the Wello health band. Free delivery across Pakistan. 2-year warranty. Lifetime app access. No subscription." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Wello</a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="features.html" class="nav-link">Features</a>
+      <a href="science.html" class="nav-link">The Science</a>
+      <a href="buy.html" class="nav-cta">Buy — Rs 59,990</a>
+    </div>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <i data-lucide="menu"></i>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile">
+  <a href="index.html">Home</a>
+  <a href="features.html">Features</a>
+  <a href="science.html">The Science</a>
+  <a href="buy.html">Buy — Rs 59,990</a>
+</div>
+
+<!-- ===== PRODUCT HERO ===== -->
+<section class="section-pad">
+  <div class="container">
+    <div class="buy-hero">
+
+      <!-- Product image -->
+      <div>
+        <div class="buy-image">
+          <img src="assets/band-hero.png" alt="Wello health band" />
+        </div>
+        <!-- Trust badges -->
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-top:1.25rem;">
+          <div style="background:var(--secondary);border:1px solid var(--border);border-radius:1rem;padding:1rem;text-align:center;">
+            <i data-lucide="truck" style="width:20px;height:20px;color:var(--primary);margin-bottom:.4rem;"></i>
+            <div style="font-size:.75rem;font-weight:700;margin-bottom:.15rem;">Free Delivery</div>
+            <div style="font-size:.7rem;color:var(--muted);">Pan Pakistan</div>
+          </div>
+          <div style="background:var(--secondary);border:1px solid var(--border);border-radius:1rem;padding:1rem;text-align:center;">
+            <i data-lucide="shield-check" style="width:20px;height:20px;color:var(--primary);margin-bottom:.4rem;"></i>
+            <div style="font-size:.75rem;font-weight:700;margin-bottom:.15rem;">2-Year Warranty</div>
+            <div style="font-size:.7rem;color:var(--muted);">Sensor module</div>
+          </div>
+          <div style="background:var(--secondary);border:1px solid var(--border);border-radius:1rem;padding:1rem;text-align:center;">
+            <i data-lucide="refresh-cw" style="width:20px;height:20px;color:var(--primary);margin-bottom:.4rem;"></i>
+            <div style="font-size:.75rem;font-weight:700;margin-bottom:.15rem;">30-Day Returns</div>
+            <div style="font-size:.7rem;color:var(--muted);">Defects only</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product info + Order form -->
+      <div class="buy-info">
+        <div>
+          <span class="buy-label">Wello Health Technologies</span>
+          <h1 class="buy-title">Wello Band<br />First Edition</h1>
+          <div style="margin-top:1rem;">
+            <span class="buy-edition">
+              <i data-lucide="zap" style="width:12px;height:12px;"></i>
+              Medical-grade · Screenless · 9 Sensors
+            </span>
+          </div>
+        </div>
+
+        <!-- Price -->
+        <div class="buy-price-row">
+          <div class="buy-price">Rs 59,990</div>
+          <div class="buy-price-note">Inclusive of all taxes. Free insured delivery across Pakistan. No subscription — lifetime app access included.</div>
+        </div>
+
+        <!-- What's included -->
+        <div class="buy-includes">
+          <h4>What's in the box</h4>
+          <div class="buy-include-item"><i data-lucide="check-circle"></i> Wello Band (sensor module + woven nylon strap)</div>
+          <div class="buy-include-item"><i data-lucide="check-circle"></i> Magnetic charging cradle</div>
+          <div class="buy-include-item"><i data-lucide="check-circle"></i> USB-C cable (1m, braided)</div>
+          <div class="buy-include-item"><i data-lucide="check-circle"></i> Quick Start Guide</div>
+          <div class="buy-include-item"><i data-lucide="check-circle"></i> App download card (iOS &amp; Android)</div>
+          <div class="buy-include-item"><i data-lucide="check-circle"></i> Lifetime software updates</div>
+        </div>
+
+        <!-- Order form -->
+        <div class="order-section">
+          <h3>Your Details</h3>
+          <p class="order-desc">Fill in your shipping details below. After placing your order you will be redirected to our secure payment page.</p>
+
+          <form id="order-form" novalidate>
+            <input type="hidden" id="band-size" name="band_size" value="" />
+
+            <!-- Personal -->
+            <div class="form-section-title">Personal Information</div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="first-name">First Name</label>
+                <input class="form-input" id="first-name" name="first_name" type="text" placeholder="Arjun" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="last-name">Last Name</label>
+                <input class="form-input" id="last-name" name="last_name" type="text" placeholder="Sharma" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address</label>
+                <input class="form-input" id="email" name="email" type="email" placeholder="arjun@example.com" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone Number</label>
+                <input class="form-input" id="phone" name="phone" type="tel" placeholder="+91 98765 43210" required />
+              </div>
+            </div>
+
+            <!-- Band size -->
+            <div class="form-section-title">Band Size</div>
+            <p style="font-size:.8125rem;color:var(--muted);margin-bottom:1rem;">Measure your wrist circumference in centimetres and select below. The strap is adjustable within each size range.</p>
+            <div class="size-guide">
+              <button type="button" class="size-btn" data-size="S">
+                S
+                <span class="size-cm">14–17 cm</span>
+              </button>
+              <button type="button" class="size-btn selected" data-size="M">
+                M
+                <span class="size-cm">17–19 cm</span>
+              </button>
+              <button type="button" class="size-btn" data-size="L">
+                L
+                <span class="size-cm">19–22 cm</span>
+              </button>
+            </div>
+            <script>document.getElementById('band-size').value = 'M';</script>
+
+            <!-- Shipping -->
+            <div class="form-section-title">Shipping Address</div>
+            <div class="form-group">
+              <label class="form-label" for="address">Street Address</label>
+              <input class="form-input" id="address" name="address" type="text" placeholder="14, MG Road, Koramangala" required />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="city">City</label>
+                <input class="form-input" id="city" name="city" type="text" placeholder="Bengaluru" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="pincode">PIN Code</label>
+                <input class="form-input" id="pincode" name="pincode" type="text" placeholder="560034" maxlength="6" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="state">State</label>
+              <select class="form-select" id="state" name="state" required>
+                <option value="">Select state</option>
+                <option>Andhra Pradesh</option><option>Arunachal Pradesh</option><option>Assam</option>
+                <option>Bihar</option><option>Chhattisgarh</option><option>Goa</option>
+                <option>Gujarat</option><option>Haryana</option><option>Himachal Pradesh</option>
+                <option>Jharkhand</option><option selected>Karnataka</option><option>Kerala</option>
+                <option>Madhya Pradesh</option><option>Maharashtra</option><option>Manipur</option>
+                <option>Meghalaya</option><option>Mizoram</option><option>Nagaland</option>
+                <option>Odisha</option><option>Punjab</option><option>Rajasthan</option>
+                <option>Sikkim</option><option>Tamil Nadu</option><option>Telangana</option>
+                <option>Tripura</option><option>Uttar Pradesh</option><option>Uttarakhand</option>
+                <option>West Bengal</option><option>Delhi</option>
+              </select>
+            </div>
+
+            <!-- Pay -->
+            <div class="pay-box">
+              <div class="pay-total">Order Total</div>
+              <span class="pay-amount">Rs 59,990</span>
+              <button type="submit" class="pay-btn">
+                <i data-lucide="lock"></i>
+                Pay Securely — Rs 59,990
+              </button>
+              <div class="pay-note">Secured with 256-bit SSL. Razorpay / UPI / Net Banking / Cards accepted.</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TECH SPECS ===== -->
+<section class="section-pad" style="background:var(--secondary);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="container-mid">
+    <div class="anim-on-scroll">
+      <span class="eyebrow">Specifications</span>
+      <h2 class="section-title mb-lg">Every detail, specified.</h2>
+    </div>
+    <table class="specs-table anim-on-scroll">
+      <thead>
+        <tr>
+          <th>Specification</th>
+          <th>Detail</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Sensors</td><td>Multi-wavelength optical PPG (green/red/IR), precision thermistor, 3-axis accelerometer, gyroscope, bioimpedance module</td></tr>
+        <tr><td>Display</td><td>None — screenless design</td></tr>
+        <tr><td>Battery</td><td>7 days continuous use · 90-minute full charge via magnetic cradle + USB-C</td></tr>
+        <tr><td>Water Resistance</td><td>5ATM (50 metres). Swimming, showering, rain — no problem.</td></tr>
+        <tr><td>Weight</td><td>24g with strap · 18g sensor module only</td></tr>
+        <tr><td>Strap Material</td><td>Woven nylon, hypoallergenic. Silicone gasket on sensor base.</td></tr>
+        <tr><td>Sizes</td><td>S (14–17 cm) · M (17–19 cm) · L (19–22 cm)</td></tr>
+        <tr><td>Connectivity</td><td>Bluetooth 5.2 Low Energy</td></tr>
+        <tr><td>App Compatibility</td><td>iOS 16+ · Android 10+ (Bluetooth 5.0 required)</td></tr>
+        <tr><td>Data Storage</td><td>7 days on-device · Unlimited cloud (HIPAA-compliant)</td></tr>
+        <tr><td>Health Integrations</td><td>Apple Health · Google Fit</td></tr>
+        <tr><td>Warranty</td><td>2 years — sensor module · 6 months — strap</td></tr>
+        <tr><td>Delivery</td><td>Free insured express delivery, pan Pakistan. Estimated 5–7 business days.</td></tr>
+        <tr><td>Returns</td><td>30-day return window for defective units. No change-of-mind returns on personalised items.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== LIFESTYLE PHOTOS ===== -->
+<section class="section-pad">
+  <div class="container">
+    <div class="anim-on-scroll text-center mb-xl">
+      <span class="eyebrow">In the wild</span>
+      <h2 class="section-title">Made for how you actually live.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;" class="anim-on-scroll">
+      <div style="grid-row:span 2;border-radius:2rem;overflow:hidden;background:var(--secondary);">
+        <img src="assets/lifestyle-morning.png" alt="Wello morning routine" style="width:100%;height:100%;object-fit:cover;" />
+      </div>
+      <div style="border-radius:1.5rem;overflow:hidden;background:var(--secondary);">
+        <img src="assets/lifestyle-yoga.png" alt="Wello during yoga" style="width:100%;height:220px;object-fit:cover;" />
+      </div>
+      <div style="border-radius:1.5rem;overflow:hidden;background:var(--secondary);">
+        <img src="assets/lifestyle-sleep.png" alt="Wello during sleep" style="width:100%;height:220px;object-fit:cover;" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section-pad" style="background:var(--secondary);border-top:1px solid var(--border);">
+  <div class="container-mid">
+    <div class="anim-on-scroll text-center mb-xl">
+      <span class="eyebrow">Before you order</span>
+      <h2 class="section-title">Common questions.</h2>
+    </div>
+    <div class="buy-faq anim-on-scroll">
+
+      <div class="buy-faq-item">
+        <button class="buy-faq-q">
+          Is there a subscription fee?
+          <span class="chev"><i data-lucide="plus"></i></span>
+        </button>
+        <div class="buy-faq-a">No. The Rs 59,990 purchase price includes the band, the companion app, and all future feature updates for life. We believe your health data belongs to you, not behind a paywall.</div>
+      </div>
+
+      <div class="buy-faq-item">
+        <button class="buy-faq-q">
+          How long does delivery take?
+          <span class="chev"><i data-lucide="plus"></i></span>
+        </button>
+        <div class="buy-faq-a">Orders are dispatched within 2 business days. Delivery takes 5–7 business days to most Pakistani addresses via premium courier. Tracking is provided via email and SMS. All orders are fully insured at no extra cost.</div>
+      </div>
+
+      <div class="buy-faq-item">
+        <button class="buy-faq-q">
+          What is the return policy?
+          <span class="chev"><i data-lucide="plus"></i></span>
+        </button>
+        <div class="buy-faq-a">If your Wello arrives defective or fails to operate as specified within 30 days, we will replace the sensor module at no charge. If the device fails within the 2-year warranty period, we cover repair or replacement of the sensor module. Straps carry a 6-month warranty.</div>
+      </div>
+
+      <div class="buy-faq-item">
+        <button class="buy-faq-q">
+          Which payment methods are accepted?
+          <span class="chev"><i data-lucide="plus"></i></span>
+        </button>
+        <div class="buy-faq-a">We accept all major UPI apps (Google Pay, PhonePe, Paytm), Net Banking (all major Pakistani banks), Debit and Credit Cards (Visa, Mastercard, RuPay), and EMI options via select banks. Payments are processed through Razorpay's secure gateway.</div>
+      </div>
+
+      <div class="buy-faq-item">
+        <button class="buy-faq-q">
+          How do I know which size to choose?
+          <span class="chev"><i data-lucide="plus"></i></span>
+        </button>
+        <div class="buy-faq-a">Wrap a soft measuring tape around your wrist just above the wrist bone. S fits 14–17 cm, M fits 17–19 cm (most common), and L fits 19–22 cm. The strap is adjustable within each range. If you are between sizes, choose the larger one for comfort during 24/7 wear.</div>
+      </div>
+
+      <div class="buy-faq-item">
+        <button class="buy-faq-q">
+          Is the band safe for people with medical conditions?
+          <span class="chev"><i data-lucide="plus"></i></span>
+        </button>
+        <div class="buy-faq-a">Wello is a general wellness device and is not intended to diagnose, treat, or replace medical advice. Individuals with implanted cardiac devices (pacemakers, ICDs) should consult their cardiologist before use due to the bioimpedance sensor. Remove the band before entering an MRI environment. Always consult a physician for medical concerns.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <span class="footer-logo">Wello</span>
+        <p class="footer-desc">Health intelligence without the screen. Wello is a medical-grade wellness band built for people who want to understand their bodies, not just count their steps.</p>
+      </div>
+      <div>
+        <h5>Product</h5>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="science.html">The Science</a></li>
+          <li><a href="buy.html">Buy Now</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Sale</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Wello Health Technologies Pvt. Ltd. All rights reserved.</span>
+      <span>Made in Pakistan</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@0.427.0/dist/umd/lucide.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

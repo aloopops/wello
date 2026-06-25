@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Wello Health Technologies</title>
+  <meta name="description" content="Learn about the team behind Wello — building medical-grade health intelligence for people who want to understand their bodies." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .about-hero { padding: 5rem 0 4.5rem; border-bottom: 1px solid var(--border); }
+    .about-hero-title { font-size: clamp(2.75rem, 6vw, 4.75rem); letter-spacing: .015em; line-height: 1.08; max-width: 720px; margin-bottom: 1.5rem; }
+    .about-hero-sub { font-size: 1.0625rem; color: var(--muted); line-height: 1.75; max-width: 540px; }
+    .mission-grid { display: grid; grid-template-columns: 1fr; gap: 4rem; align-items: center; }
+    @media (min-width: 1024px) { .mission-grid { grid-template-columns: 1fr 1fr; gap: 6rem; } }
+    .mission-text h2 { font-size: clamp(2rem, 4.5vw, 3rem); margin-bottom: 1.5rem; }
+    .mission-text p { color: var(--muted); line-height: 1.8; margin-bottom: 1.25rem; }
+    .mission-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2.5rem; }
+    .mission-stat { background: var(--secondary); border: 1px solid var(--border); border-radius: 1.25rem; padding: 1.75rem 1.5rem; }
+    .mission-stat strong { font-family: var(--serif); font-size: 2.25rem; display: block; line-height: 1; margin-bottom: .35rem; }
+    .mission-stat span { font-size: .75rem; text-transform: uppercase; letter-spacing: .12em; font-weight: 600; color: var(--muted); }
+    .mission-visual { background: var(--dark-bg); border-radius: 2rem; padding: 3.5rem 2.5rem; color: var(--dark-fg); display: flex; flex-direction: column; gap: 2rem; }
+    .mission-visual-quote { font-family: var(--serif); font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.3; font-style: italic; color: var(--dark-fg); }
+    .mission-visual-attr { font-size: .8125rem; color: rgba(255,255,255,.4); letter-spacing: .08em; text-transform: uppercase; font-weight: 600; }
+    .values-section { padding: 6rem 0; background: var(--secondary); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .values-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 3.5rem; }
+    @media (min-width: 640px) { .values-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .values-grid { grid-template-columns: repeat(3, 1fr); } }
+    .value-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 2.5rem 2rem; transition: border-color .3s, box-shadow .3s; }
+    .value-card:hover { border-color: var(--primary-soft); box-shadow: var(--shadow-md); }
+    .value-icon { width: 48px; height: 48px; border-radius: 50%; background: var(--secondary); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--primary); margin-bottom: 1.5rem; }
+    .value-icon [data-lucide] { width: 20px; height: 20px; stroke-width: 1.5; }
+    .value-card h3 { font-size: 1.25rem; margin-bottom: .75rem; letter-spacing: .015em; }
+    .value-card p { font-size: .9rem; color: var(--muted); line-height: 1.7; }
+    .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3.5rem; }
+    @media (min-width: 768px) { .team-grid { grid-template-columns: repeat(4, 1fr); } }
+    .team-card { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); transition: box-shadow .3s; }
+    .team-card:hover { box-shadow: var(--shadow-md); }
+    .team-avatar { width: 100%; aspect-ratio: 1; background: var(--secondary); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 2.5rem; color: var(--primary); border-bottom: 1px solid var(--border); }
+    .team-info { padding: 1.25rem 1rem; }
+    .team-name { font-size: 1rem; font-weight: 600; margin-bottom: .2rem; }
+    .team-role { font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 600; color: var(--primary); }
+    .team-bio { font-size: .8125rem; color: var(--muted); line-height: 1.6; margin-top: .5rem; }
+    .about-cta-inner { background: var(--dark-bg); border-radius: 2rem; padding: 5rem 3rem; text-align: center; color: var(--dark-fg); }
+    .about-cta-inner h2 { font-size: clamp(2rem, 4.5vw, 3rem); color: var(--dark-fg); margin-bottom: 1.25rem; }
+    .about-cta-inner p { color: rgba(255,255,255,.5); max-width: 460px; margin: 0 auto 2.5rem; line-height: 1.7; }
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Wello</a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="features.html" class="nav-link">Features</a>
+      <a href="science.html" class="nav-link">The Science</a>
+      <a href="buy.html" class="nav-cta">Buy — Rs 59,990</a>
+    </div>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><i data-lucide="menu"></i></button>
+  </div>
+</nav>
+<div class="nav-mobile">
+  <a href="index.html">Home</a>
+  <a href="features.html">Features</a>
+  <a href="science.html">The Science</a>
+  <a href="buy.html">Buy — Rs 59,990</a>
+</div>
+
+<section class="about-hero">
+  <div class="container">
+    <span class="eyebrow">Our Story</span>
+    <h1 class="about-hero-title">Built by people who<br /><em>refused to guess.</em></h1>
+    <p class="about-hero-sub">Wello was born from one obsession: the most important health data in the world was buried inside devices built to sell notifications, not knowledge.</p>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="mission-grid">
+      <div class="mission-text anim-on-scroll">
+        <span class="eyebrow">Our Mission</span>
+        <h2>Health intelligence for people who want the truth.</h2>
+        <p>We started Wello because we were frustrated. Frustrated by smartwatches that counted steps but couldn't tell you if you were overtrained. Frustrated by apps that sent 200 notifications a day but gave you zero understanding of your nervous system.</p>
+        <p>So we built something different. A screenless band with medical-grade sensors. An algorithm trained on peer-reviewed science. A morning summary so clear you know exactly what your body needs — in three numbers.</p>
+        <p>We are a team of biomedical engineers, clinicians, and product designers based in Lahore, Pakistan. We believe premium health technology should be accessible, honest, and built to last.</p>
+        <div class="mission-stat-grid">
+          <div class="mission-stat"><strong>9</strong><span>Sensors on-board</span></div>
+          <div class="mission-stat"><strong>87%</strong><span>Sleep concordance</span></div>
+          <div class="mission-stat"><strong>7d</strong><span>Battery life</span></div>
+          <div class="mission-stat"><strong>2026</strong><span>First Edition</span></div>
+        </div>
+      </div>
+      <div class="mission-visual anim-on-scroll">
+        <blockquote class="mission-visual-quote">"The most dangerous health metric is the one you don't track."</blockquote>
+        <p class="mission-visual-attr">— Wello Founding Team, 2024</p>
+        <div style="height:1px;background:rgba(255,255,255,.08);"></div>
+        <div style="display:flex;flex-direction:column;gap:1rem;">
+          <div style="display:flex;align-items:center;gap:.875rem;"><div style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i data-lucide="shield-check" style="width:16px;height:16px;color:var(--primary-soft);"></i></div><span style="font-size:.875rem;color:rgba(255,255,255,.65);">Medical-grade sensor suite</span></div>
+          <div style="display:flex;align-items:center;gap:.875rem;"><div style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i data-lucide="brain" style="width:16px;height:16px;color:var(--primary-soft);"></i></div><span style="font-size:.875rem;color:rgba(255,255,255,.65);">Peer-reviewed recovery algorithm</span></div>
+          <div style="display:flex;align-items:center;gap:.875rem;"><div style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i data-lucide="lock" style="width:16px;height:16px;color:var(--primary-soft);"></i></div><span style="font-size:.875rem;color:rgba(255,255,255,.65);">End-to-end encrypted health data</span></div>
+          <div style="display:flex;align-items:center;gap:.875rem;"><div style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i data-lucide="smartphone" style="width:16px;height:16px;color:var(--primary-soft);"></i></div><span style="font-size:.875rem;color:rgba(255,255,255,.65);">No subscription — lifetime app access</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="values-section">
+  <div class="container">
+    <div class="text-center anim-on-scroll">
+      <span class="eyebrow">What we believe</span>
+      <h2 class="section-title">Our principles.</h2>
+      <p class="section-sub">Every product decision at Wello runs through the same filter: does this make the user's health more understandable?</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card anim-on-scroll"><div class="value-icon"><i data-lucide="microscope"></i></div><h3>Science, not trends</h3><p>Every metric Wello tracks is grounded in peer-reviewed physiology. We don't add features because other devices have them — we add them because evidence says they matter.</p></div>
+      <div class="value-card anim-on-scroll"><div class="value-icon"><i data-lucide="eye-off"></i></div><h3>Invisible by design</h3><p>A health device shouldn't compete for your attention. Wello has no screen, no buzzes, no badges — just a silent sensor doing its job and a morning report when you're ready.</p></div>
+      <div class="value-card anim-on-scroll"><div class="value-icon"><i data-lucide="lock"></i></div><h3>Your data, always</h3><p>Your health data is yours. We never sell it, never use it for advertising, and give you a full export at any time. Wello is funded by device sales, not by your information.</p></div>
+      <div class="value-card anim-on-scroll"><div class="value-icon"><i data-lucide="infinity"></i></div><h3>No subscriptions</h3><p>One purchase. Lifetime app access. Lifetime data storage. We believe charging monthly for a device you already bought is wrong — so we simply don't do it.</p></div>
+      <div class="value-card anim-on-scroll"><div class="value-icon"><i data-lucide="wrench"></i></div><h3>Built to last</h3><p>Medical-grade components. Aerospace-grade ceramic coating. A strap engineered to survive sweat, showers, and sleep for years — not a product cycle.</p></div>
+      <div class="value-card anim-on-scroll"><div class="value-icon"><i data-lucide="globe"></i></div><h3>Made in Pakistan</h3><p>We're proud to be building world-class health technology from Lahore. Wello is proof that precision hardware and rigorous science can come from anywhere.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="text-center mb-xl anim-on-scroll">
+      <span class="eyebrow">The people</span>
+      <h2 class="section-title">Who built Wello.</h2>
+      <p class="section-sub">A small, deeply focused team of engineers, clinicians, and designers obsessed with one problem.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card anim-on-scroll"><div class="team-avatar">A</div><div class="team-info"><div class="team-name">Ahmed Raza</div><div class="team-role">Co-founder &amp; CEO</div><div class="team-bio">Biomedical engineer and former cardiac monitoring researcher. Built Wello because he watched his father be misdiagnosed for two years.</div></div></div>
+      <div class="team-card anim-on-scroll"><div class="team-avatar">S</div><div class="team-info"><div class="team-name">Sara Malik</div><div class="team-role">Co-founder &amp; CTO</div><div class="team-bio">Embedded systems specialist. Designed the sensor fusion stack and the recovery algorithm that underpins the Wello score.</div></div></div>
+      <div class="team-card anim-on-scroll"><div class="team-avatar">O</div><div class="team-info"><div class="team-name">Omar Siddiqui</div><div class="team-role">Head of Science</div><div class="team-bio">Sleep researcher and physiologist. Led the clinical validation study benchmarking Wello against polysomnography.</div></div></div>
+      <div class="team-card anim-on-scroll"><div class="team-avatar">Z</div><div class="team-info"><div class="team-name">Zara Khan</div><div class="team-role">Head of Design</div><div class="team-bio">Industrial and UX designer. Responsible for the band's form, finish, and every pixel of the Wello app experience.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" style="background:var(--secondary);border-top:1px solid var(--border);">
+  <div class="container">
+    <div class="about-cta-inner anim-on-scroll">
+      <span class="eyebrow" style="color:var(--primary-soft);">Ready to understand your body?</span>
+      <h2>Your health. Fully understood.</h2>
+      <p>No subscription. No screen. No monthly fees. One purchase gives you the band, the app, and lifetime access to your health data.</p>
+      <a href="buy.html" class="btn-dark" style="font-size:13px;padding:1rem 2.5rem;">Order Now — Rs 59,990 <i data-lucide="arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><span class="footer-logo">Wello</span><p class="footer-desc">Health intelligence without the screen. A medical-grade wellness band for people who want to understand their bodies, not just count their steps.</p></div>
+      <div><h5>Product</h5><ul><li><a href="features.html">Features</a></li><li><a href="science.html">The Science</a></li><li><a href="buy.html">Buy Now</a></li></ul></div>
+      <div><h5>Company</h5><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Sale</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Wello Health Technologies Pvt. Ltd. All rights reserved.</span>
+      <span>Made in Pakistan</span>
+    </div>
+  </div>
+</footer>
+<script src="https://unpkg.com/lucide@0.427.0/dist/umd/lucide.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

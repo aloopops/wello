@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Features — Wello Health Band</title>
+  <meta name="description" content="Nine medical-grade sensors in one slim wristband. Explore every metric Wello tracks — heart rate, HRV, SpO2, sleep, skin temperature, stress, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Wello</a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="features.html" class="nav-link">Features</a>
+      <a href="science.html" class="nav-link">The Science</a>
+      <a href="buy.html" class="nav-cta">Buy — Rs 59,990</a>
+      
+    </div>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <i data-lucide="menu"></i>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile">
+  <a href="index.html">Home</a>
+  <a href="features.html">Features</a>
+  <a href="science.html">The Science</a>
+  <a href="buy.html">Buy — Rs 59,990</a>
+</div>
+
+<!-- ===== PAGE HERO ===== -->
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Sensor Suite</span>
+    <h1 class="page-hero-title">Nine sensors.<br />Every signal that matters.</h1>
+    <p class="page-hero-sub">Beneath the minimal woven exterior lies medical-grade hardware that most clinical devices reserve for hospital settings. Here is everything Wello measures — and why it matters to you.</p>
+  </div>
+</section>
+
+<!-- ===== FEATURES GRID ===== -->
+<section class="section-pad">
+  <div class="container">
+    <div class="features-grid">
+
+      <!-- 1. Heart Rate -->
+      <div class="feat-card anim-on-scroll">
+        <div class="feat-ic"><i data-lucide="heart"></i></div>
+        <h3>Continuous Heart Rate</h3>
+        <span class="feat-range">50 – 220 bpm</span>
+        <p>Multi-wavelength PPG (photoplethysmography) sensors on the underside of the band emit green, red, and infrared light into your wrist capillaries and measure the returning signal. This gives Wello an accurate heartbeat reading every second, 24 hours a day — not just during workouts.</p>
+        <div class="feat-insight">
+          <i data-lucide="info"></i>
+          <span>Healthy resting heart rate: 50–80 bpm. A sustained resting rate above 90 bpm may indicate elevated stress or early illness.</span>
+        </div>
+      </div>
+
+      <!-- 2. HRV -->
+      <div class="feat-card anim-on-scroll">
+        <div class="feat-ic"><i data-lucide="activity"></i></div>
+        <h3>Heart Rate Variability</h3>
+        <span class="feat-range">Nightly · 20 – 120 ms</span>
+        <p>HRV is measured automatically during your deepest sleep window — the phase where parasympathetic activity peaks and readings are most reliable. Wello uses RMSSD methodology (the clinical standard) to compute the millisecond variation between successive heartbeats. This single number is the most sensitive indicator of recovery, stress load, and cardiovascular health.</p>
+        <div class="feat-insight">
+          <i data-lucide="info"></i>
+          <span>HRV is highly individual. Wello tracks your personal baseline over weeks to detect meaningful deviation, not absolute comparison.</span>
+        </div>
+      </div>
+
+      <!-- 3. SpO2 -->
+      <div class="feat-card anim-on-scroll">
+        <div class="feat-ic"><i data-lucide="droplet"></i></div>
+        <h3>Blood Oxygen (SpO2)</h3>
+        <span class="feat-range">70 – 100 %</span>
+        <p>Red and infrared LEDs measure how much light is absorbed by your haemoglobin. Oxygenated blood absorbs more infrared light; deoxygenated blood absorbs more red. The ratio gives a continuous SpO2 percentage. Wello flags sustained drops below 90% and generates a nightly respiratory report for overnight desaturation events.</p>
+        <div class="feat-insight">
+          <i data-lucide="info"></i>
+          <span>Healthy SpO2: 95–100%. Altitude, sleep apnea, and certain conditions can cause drops Wello will flag.</span>
+        </div>
+      </div>
+
+      <!-- 4. Sleep Stages -->
+      <div class="feat-card anim-on-scroll">
+        <div class="feat-ic"><i data-lucide="moon"></i></div>
+        <h3>Sleep Stage Analysis</h3>
+        <span class="feat-range">Deep · REM · Light · Awake</span>
+        <p>Wello combines accelerometer movement data, HRV patterns, heart rate, and SpO2 to classify your sleep into four stages throughout the night. Deep sleep governs physical tissue repair; REM governs memory consolidation and emotional regulation. Wello tracks time in each stage and provides a composite Sleep Score nightly.</p>
+        <div class="feat-insight">
+          <i data-lucide="info"></i>
+          <span>87% concordance with clinical polysomnography (PSG) in internal validation studies across 340 nights of data.</span>
+        </div>
+      </div>
+
+      <!-- 5. Skin Temperature -->
+      <div class="feat-card anim-on-scroll">
+        <div class="feat-ic"><i data-lucide="thermometer"></i></div>
+        <h3>Skin Temperature</h3>
+        <span class="feat-range">Relative deviation · ±2 °C</span>
+        <p>A high-sensitivity thermistor on the band back measures skin temperature to 0.05°C accuracy throughout the night. Rather than reporting an absolute number, Wello tracks your nightly deviation from your personal baseline. An upward deviation of 0.5°C or more often predicts illness 12–24 hours before symptomatic onset. For women, this data also maps precisely onto the luteal phase of the menstrual cycle.</p>
+        <div class="feat-insight">
+          <i data-lucide="info"></i>
+          <span>Skin temperature trends establish a personal baseline over 2–3 weeks. The accuracy of illness and cycle prediction improves over time.</span>
+        </div>
+      </div>
+
+      <!-- 6. Stress -->
+      <div class="feat-card anim-on-scroll">
+        <div class="feat-ic"><i data-lucide="brain"></i></div>
+        <h3>Stress Monitoring</h3>
+        <span class="feat-range">Physiological load index</span>
+        <p>Wello models physiological stress by combining daytime HRV suppression, heart rate elevation above baseline, breathing rate, and movement variability. This is distinct from perceived stress — the band detects the body's autonomic response to stress, not just your subjective feeling. High-stress periods are highlighted in your daily timeline to correlate with your schedule and habits.</p>
+        <div class="feat-insight">
+          <i data-lucide="info"></i>
+          <span>Chronic high stress manifests as consistently suppressed HRV. Wello trends this over weeks, not just days.</span>
+        </div>
+      </div>
+
+      <!-- 7. Women's Wellness -->
+      <div class="feat-card anim-on-scroll">
+        <div class="feat-ic"><i data-lucide="shield"></i></div>
+        <h3>Women's Wellness</h3>
+        <span class="feat-range">Cycle · Ovulation · Luteal</span>
+        <p>Using continuous nightly temperature data, Wello tracks the biphasic temperature shift that marks ovulation — temperatures rise 0.2–0.5°C post-ovulation and remain elevated through the luteal phase. This allows cycle-phase predictions, PMS pattern identification, and retrospective ovulation confirmation. All data is local and never shared or monetised.</p>
+        <div class="feat-insight">
+          <i data-lucide="info"></i>
+          <span>Temperature-based cycle tracking becomes statistically reliable after 2–3 full cycles of data collection.</span>
+        </div>
+      </div>
+
+      <!-- 8. Blood Pressure Trends -->
+      <div class="feat-card anim-on-scroll">
+        <div class="feat-ic"><i data-lucide="waves"></i></div>
+        <h3>Blood Pressure Trends</h3>
+        <span class="feat-range">Relative PTT tracking</span>
+        <p>Using Pulse Transit Time (PTT) — the delay between the heartbeat signal and its arrival at the wrist sensor — Wello can detect relative changes in arterial stiffness and blood pressure over time. This is not a cuff-equivalent measurement, but it is a validated method for detecting meaningful upward trends in cardiovascular load, which often precede clinical hypertension by months.</p>
+        <div class="feat-insight">
+          <i data-lucide="info"></i>
+          <span>PTT-based BP trending is a screening tool, not a diagnostic replacement for regular cuff measurements.</span>
+        </div>
+      </div>
+
+      <!-- 9. Energy / Readiness -->
+      <div class="feat-card anim-on-scroll">
+        <div class="feat-ic"><i data-lucide="battery"></i></div>
+        <h3>Recovery &amp; Readiness</h3>
+        <span class="feat-range">0 – 100 daily score</span>
+        <p>Wello synthesises all overnight metrics into a single Readiness Score each morning. The algorithm weighs HRV vs. your baseline (40%), sleep quality and duration (30%), resting heart rate trend (20%), and skin temperature deviation (10%). Scores above 70 indicate high readiness; below 50 suggests active recovery or an early stress response.</p>
+        <div class="feat-insight">
+          <i data-lucide="info"></i>
+          <span>Readiness Scores become more personalised and accurate as Wello builds your multi-week physiological baseline.</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== LIFESTYLE IMAGE ===== -->
+<section style="padding: 0 0 5rem;">
+  <div class="container">
+    <div class="anim-on-scroll" style="border-radius:2rem;overflow:hidden;max-height:480px;">
+      <img src="assets/H9471beef69b543bca623600831a09528Y.jpg" alt="Wello sensor detail" style="width:100%;height:480px;object-fit:cover;object-position:center;" />
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMPANION APP ===== -->
+<section class="section-pad" style="background: var(--secondary); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container">
+    <div class="app-section">
+      <div class="app-grid">
+        <div>
+          <span class="eyebrow" style="color:var(--primary-soft)">Companion App</span>
+          <h2>Data when you want it.<br />Silence when you don't.</h2>
+          <p>The Wello app (iOS 16+ and Android 10+) is the only place your data lives. Open it deliberately — not because a notification dragged you in. Your health story is waiting, not pinging.</p>
+          <p>Every morning, your overnight metrics are waiting in a clean, single-page digest. Dive deeper into 30-day trends, stage breakdowns, and weekly summaries whenever you choose.</p>
+          <ul class="app-list">
+            <li><i data-lucide="check"></i> Morning recovery digest — one screen, all scores</li>
+            <li><i data-lucide="check"></i> 30-day trend charts for every metric</li>
+            <li><i data-lucide="check"></i> Weekly email summaries (optional)</li>
+            <li><i data-lucide="check"></i> Apple Health & Google Fit two-way sync</li>
+            <li><i data-lucide="check"></i> Lifetime access — no subscription ever</li>
+          </ul>
+        </div>
+        <div class="app-preview">
+          <div class="dash-tile-label" style="font-size:9px;text-transform:uppercase;letter-spacing:.15em;color:rgba(255,255,255,.3)">Today's Digest</div>
+          <div class="dash-row">
+            <div class="dash-tile">
+              <div class="dash-tile-label">Recovery</div>
+              <div class="dash-tile-val">74</div>
+              <div class="dash-tile-sub">Good · ↑ from 68</div>
+              <div class="dash-chart-bar bar-74"></div>
+            </div>
+            <div class="dash-tile">
+              <div class="dash-tile-label">Sleep Score</div>
+              <div class="dash-tile-val">86</div>
+              <div class="dash-tile-sub">7h 42m · 26% deep</div>
+              <div class="dash-chart-bar bar-88"></div>
+            </div>
+          </div>
+          <div class="dash-row">
+            <div class="dash-tile">
+              <div class="dash-tile-label">HRV</div>
+              <div class="dash-tile-val">58<span style="font-size:.9rem;opacity:.5">ms</span></div>
+              <div class="dash-tile-sub">+4ms vs baseline</div>
+              <div class="dash-chart-bar bar-61"></div>
+            </div>
+            <div class="dash-tile">
+              <div class="dash-tile-label">Resting HR</div>
+              <div class="dash-tile-val">61<span style="font-size:.9rem;opacity:.5">bpm</span></div>
+              <div class="dash-tile-sub">Personal low</div>
+              <div class="dash-chart-bar bar-74"></div>
+            </div>
+          </div>
+          <div style="font-size:.75rem;color:rgba(255,255,255,.3);text-align:center;padding-top:.5rem;">Wello App — iOS & Android</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TECH SPECS ===== -->
+<section class="section-pad">
+  <div class="container-mid">
+    <div class="anim-on-scroll">
+      <span class="eyebrow">Technical Specifications</span>
+      <h2 class="section-title mb-lg">Built without compromise.</h2>
+    </div>
+    <table class="specs-table">
+      <thead>
+        <tr>
+          <th>Specification</th>
+          <th>Detail</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Sensors</td><td>Multi-wavelength optical PPG (green/red/IR), high-sensitivity thermistor, 3-axis accelerometer, gyroscope, bioimpedance sensor</td></tr>
+        <tr><td>Display</td><td>None — screenless by design</td></tr>
+        <tr><td>Battery Life</td><td>7 days continuous monitoring; 90-minute full charge via magnetic cradle (USB-C)</td></tr>
+        <tr><td>Water Resistance</td><td>5ATM (50 metres)</td></tr>
+        <tr><td>Weight</td><td>24g with strap</td></tr>
+        <tr><td>Strap Material</td><td>Woven nylon (hypoallergenic), silicone padding on sensor module</td></tr>
+        <tr><td>Connectivity</td><td>Bluetooth 5.2 LE</td></tr>
+        <tr><td>Compatibility</td><td>iOS 16+ (iPhone 8 and later) · Android 10+ (Bluetooth 5.0 required)</td></tr>
+        <tr><td>Data Storage</td><td>7 days on-device; unlimited in app with HIPAA-compliant cloud backup</td></tr>
+        <tr><td>Warranty</td><td>2 years on sensor module; 6 months on strap</td></tr>
+        <tr><td>In the box</td><td>Wello band (S/M/L), magnetic charging cradle, USB-C cable, quick start guide</td></tr>
+        <tr><td>Shipping</td><td>Pakistan-wide; insured express delivery; no additional charge</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section-pad" style="background: var(--secondary); border-top: 1px solid var(--border);">
+  <div class="container">
+    <div class="cta-band anim-on-scroll" style="border-top:none;padding:0;">
+      <span class="eyebrow">Ready to know your body?</span>
+      <h2>One band. A lifetime of insight.</h2>
+      <p>No subscription. No hidden fees. Just data that helps you live better.</p>
+      <span class="cta-price">Rs 59,990</span>
+      <span class="cta-sub">Free delivery across Pakistan · 2-year warranty · 30-day return window</span>
+      <div>
+        <a href="buy.html" class="btn-dark" style="font-size:13px;padding:1rem 2.5rem;">
+          Order Now <i data-lucide="arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <span class="footer-logo">Wello</span>
+        <p class="footer-desc">Health intelligence without the screen. Built for people who want to understand their bodies, not just count their steps.</p>
+      </div>
+      <div>
+        <h5>Product</h5>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="science.html">The Science</a></li>
+          <li><a href="buy.html">Buy Now</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Sale</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Wello Health Technologies Pvt. Ltd.</span>
+      <span>Made in Pakistan</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@0.427.0/dist/umd/lucide.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Science — Wello Health Band</title>
+  <meta name="description" content="How Wello calculates your Recovery Score, measures HRV, detects sleep stages, and monitors stress — the science explained." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Wello</a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="features.html" class="nav-link">Features</a>
+      <a href="science.html" class="nav-link">The Science</a>
+      <a href="buy.html" class="nav-cta">Buy — Rs 59,990</a>
+    </div>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <i data-lucide="menu"></i>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile">
+  <a href="index.html">Home</a>
+  <a href="features.html">Features</a>
+  <a href="science.html">The Science</a>
+  <a href="buy.html">Buy — Rs 59,990</a>
+</div>
+
+<!-- ===== PAGE HERO ===== -->
+<section class="page-hero" style="background: var(--dark-bg);">
+  <div class="container">
+    <span class="eyebrow" style="color:var(--primary-soft)">Methodology</span>
+    <h1 class="page-hero-title" style="color:var(--dark-fg)">The science behind<br />knowing yourself.</h1>
+    <p class="page-hero-sub" style="color:rgba(255,255,255,.5)">Wello's algorithms are built on peer-reviewed research in autonomic neuroscience, sleep medicine, and physiological monitoring. Here is exactly how the data becomes insight.</p>
+  </div>
+</section>
+
+<!-- ===== ACCURACY STATS ===== -->
+<section class="section-pad" style="background: var(--secondary); border-bottom: 1px solid var(--border);">
+  <div class="container">
+    <div class="sci-stats anim-on-scroll">
+      <div class="sci-stat-card">
+        <span class="sci-stat-val">87%</span>
+        <span class="sci-stat-label">Sleep stage concordance vs. clinical PSG</span>
+      </div>
+      <div class="sci-stat-card">
+        <span class="sci-stat-val">±3 bpm</span>
+        <span class="sci-stat-label">Heart rate accuracy at rest</span>
+      </div>
+      <div class="sci-stat-card">
+        <span class="sci-stat-val">±2%</span>
+        <span class="sci-stat-label">SpO2 accuracy vs. clinical oximetry</span>
+      </div>
+      <div class="sci-stat-card">
+        <span class="sci-stat-val">0.05°C</span>
+        <span class="sci-stat-label">Thermistor resolution for skin temp</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 1: HRV ===== -->
+<section class="sci-section">
+  <div class="container">
+    <div class="sci-grid anim-on-scroll">
+      <div class="sci-text">
+        <span class="eyebrow">Heart Rate Variability</span>
+        <h2>The milliseconds between beats reveal everything.</h2>
+        <p>A healthy heart does not beat like a metronome. The time between each beat — called an R-R interval — varies constantly in response to your autonomic nervous system. This variation is Heart Rate Variability, and it is one of the most sensitive biomarkers in human physiology.</p>
+        <p>When your parasympathetic nervous system (rest-and-digest) dominates — as it does during deep sleep and genuine recovery — HRV is high. When your sympathetic system (fight-or-flight) dominates — during stress, illness, overtraining, or poor sleep — HRV drops measurably.</p>
+        <p>Wello uses the RMSSD method (Root Mean Square of Successive Differences), which is the clinical standard endorsed by the European Society of Cardiology. RMSSD is measured during your deepest sleep window, when external noise is lowest and the parasympathetic signal is strongest.</p>
+        <p><strong>Why it matters:</strong> A single HRV reading means little. Wello builds your personal baseline over 2–4 weeks, then alerts you to meaningful deviations — which correlate strongly with overtraining, illness onset, and chronic stress before you feel symptoms.</p>
+      </div>
+      <div>
+        <div class="hrv-visual anim-on-scroll">
+          <div class="hrv-label">Heart Rate Variability — R-R Interval Pattern</div>
+          <!-- SVG waveform visualisation -->
+          <svg class="hrv-svg" viewBox="0 0 320 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="HRV waveform">
+            <!-- High HRV label -->
+            <text x="0" y="14" font-size="9" fill="hsl(145,50%,38%)" font-family="Inter,sans-serif" font-weight="700" letter-spacing="1">HIGH HRV</text>
+            <!-- High HRV waveform (varied intervals) -->
+            <polyline points="0,40 18,40 22,14 26,60 30,40 52,40 57,12 62,62 67,40 93,40 98,16 103,58 108,40 128,40 134,10 139,64 144,40 166,40 170,18 175,56 180,40 200,40 206,13 211,61 216,40 238,40 242,15 247,59 252,40 272,40 278,11 284,65 290,40 310,40 315,13 320,40" stroke="hsl(145,50%,38%)" stroke-width="1.75" fill="none" stroke-linejoin="round"/>
+
+            <!-- Low HRV label -->
+            <text x="0" y="82" font-size="9" fill="hsl(5,65%,48%)" font-family="Inter,sans-serif" font-weight="700" letter-spacing="1">LOW HRV</text>
+            <!-- Low HRV waveform (regular intervals) -->
+            <polyline points="0,90 14,90 17,78 20,98 23,90 37,90 40,77 43,98 46,90 60,90 63,78 66,98 69,90 83,90 86,77 89,98 92,90 106,90 109,78 112,98 115,90 129,90 132,77 135,98 138,90 152,90 155,78 158,98 161,90 175,90 178,77 181,98 184,90 198,90 201,78 204,98 207,90 221,90 224,77 227,98 230,90 244,90 247,78 250,98 253,90 267,90 270,77 273,98 276,90 290,90 293,78 296,98 299,90 313,90 316,77 319,98 320,90" stroke="hsl(5,65%,48%)" stroke-width="1.75" fill="none" stroke-linejoin="round"/>
+          </svg>
+          <div class="hrv-compare">
+            <div class="hrv-state">
+              <div class="hrv-state-title">Well Recovered</div>
+              <div class="hrv-state-val high">72 ms</div>
+              <div class="hrv-state-desc">Parasympathetic dominance. Body ready for high-load activity.</div>
+            </div>
+            <div class="hrv-state">
+              <div class="hrv-state-title">Under Stress</div>
+              <div class="hrv-state-val low">34 ms</div>
+              <div class="hrv-state-desc">Sympathetic activation. Push less, recover more today.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 2: RECOVERY SCORE ===== -->
+<section class="sci-section" style="background: var(--secondary);">
+  <div class="container">
+    <div class="sci-grid flip anim-on-scroll">
+      <div class="sci-text">
+        <span class="eyebrow">Recovery Algorithm</span>
+        <h2>How Wello calculates your Recovery Score.</h2>
+        <p>Your Recovery Score (0–100) is a weighted composite of four overnight metrics. Each metric is compared to your rolling 28-day personal baseline — not an average population value — which makes the score uniquely precise to your physiology.</p>
+
+        <div style="display:flex;flex-direction:column;gap:1.25rem;margin:2rem 0;">
+          <div style="display:flex;align-items:flex-start;gap:1rem;">
+            <div style="background:var(--primary);color:white;border-radius:.5rem;padding:.35rem .75rem;font-size:.8125rem;font-weight:700;flex-shrink:0;min-width:40px;text-align:center;">40%</div>
+            <div>
+              <strong style="display:block;font-size:.9375rem;margin-bottom:.2rem;">HRV vs. Baseline</strong>
+              <span style="font-size:.875rem;color:var(--muted);">The strongest predictor. When your nightly HRV is above your 28-day average, your body signals deep recovery. Below baseline, it signals stress or fatigue.</span>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:1rem;">
+            <div style="background:hsl(207,60%,55%);color:white;border-radius:.5rem;padding:.35rem .75rem;font-size:.8125rem;font-weight:700;flex-shrink:0;min-width:40px;text-align:center;">30%</div>
+            <div>
+              <strong style="display:block;font-size:.9375rem;margin-bottom:.2rem;">Sleep Quality &amp; Duration</strong>
+              <span style="font-size:.875rem;color:var(--muted);">Time in Deep and REM sleep, total sleep duration, and number of disturbances. Both quality and quantity are considered.</span>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:1rem;">
+            <div style="background:hsl(145,45%,42%);color:white;border-radius:.5rem;padding:.35rem .75rem;font-size:.8125rem;font-weight:700;flex-shrink:0;min-width:40px;text-align:center;">20%</div>
+            <div>
+              <strong style="display:block;font-size:.9375rem;margin-bottom:.2rem;">Resting Heart Rate Trend</strong>
+              <span style="font-size:.875rem;color:var(--muted);">A lower-than-baseline resting HR during sleep signals efficient cardiac function and recovery. Elevated nightly HR often precedes illness.</span>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:1rem;">
+            <div style="background:hsl(275,45%,52%);color:white;border-radius:.5rem;padding:.35rem .75rem;font-size:.8125rem;font-weight:700;flex-shrink:0;min-width:40px;text-align:center;">10%</div>
+            <div>
+              <strong style="display:block;font-size:.9375rem;margin-bottom:.2rem;">Skin Temperature Deviation</strong>
+              <span style="font-size:.875rem;color:var(--muted);">Significant upward deviation from your personal thermal baseline indicates physiological stress — often an early illness signal.</span>
+            </div>
+          </div>
+        </div>
+
+        <p>Score interpretation: <strong>85–100</strong> = Peak readiness. <strong>70–84</strong> = Good, push moderately. <strong>50–69</strong> = Moderate — avoid high-intensity training. <strong>Below 50</strong> = Rest day. Your body is actively recovering from stress or illness.</p>
+      </div>
+      <div>
+        <div class="score-visual anim-on-scroll">
+          <div style="text-align:center;margin-bottom:.5rem;">
+            <span class="eyebrow">Recovery Score — Tonight's Reading</span>
+          </div>
+          <div class="score-ring">
+            <svg viewBox="0 0 180 180">
+              <circle class="score-ring-track" cx="90" cy="90" r="75"></circle>
+              <circle class="score-ring-fill" cx="90" cy="90" r="75" style="stroke-dashoffset:118"></circle>
+            </svg>
+            <div class="score-center">
+              <span class="score-num">74</span>
+              <span class="score-word">Good</span>
+            </div>
+          </div>
+          <div class="score-inputs">
+            <div class="score-input-item">
+              <span>HRV vs. baseline</span>
+              <div class="score-input-bar bar-w-82"></div>
+              <span class="score-input-val">+8ms</span>
+            </div>
+            <div class="score-input-item">
+              <span>Sleep quality</span>
+              <div class="score-input-bar bar-w-71"></div>
+              <span class="score-input-val">71</span>
+            </div>
+            <div class="score-input-item">
+              <span>Resting HR</span>
+              <div class="score-input-bar bar-w-90"></div>
+              <span class="score-input-val">62bpm</span>
+            </div>
+            <div class="score-input-item">
+              <span>Skin temp</span>
+              <div class="score-input-bar bar-w-65"></div>
+              <span class="score-input-val">+0.1°</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 3: SLEEP ===== -->
+<section class="sci-section">
+  <div class="container">
+    <div class="sci-grid anim-on-scroll">
+      <div class="sci-text">
+        <span class="eyebrow">Sleep Architecture</span>
+        <h2>Every stage of sleep serves a different purpose.</h2>
+        <p>Sleep is not a single uniform state. Your brain cycles through four distinct stages approximately every 90 minutes throughout the night, each serving a different biological function. Missing even one stage has measurable consequences the next day.</p>
+
+        <div style="display:flex;flex-direction:column;gap:1.5rem;margin:2rem 0;">
+          <div>
+            <strong style="color:hsl(37,40%,50%);font-size:.9375rem;">Awake (5–10%)</strong>
+            <p style="margin-top:.25rem;font-size:.875rem;color:var(--muted);">Brief micro-awakenings are normal. Frequent interruptions lasting over 2 minutes degrade deep and REM accumulation.</p>
+          </div>
+          <div>
+            <strong style="color:hsl(207,60%,55%);font-size:.9375rem;">Light Sleep (40–55%)</strong>
+            <p style="margin-top:.25rem;font-size:.875rem;color:var(--muted);">The transition phase. Sleep spindles during Light sleep are linked to motor memory consolidation and sensory processing. Also when your body temperature drops and melatonin peaks.</p>
+          </div>
+          <div>
+            <strong style="color:hsl(235,55%,52%);font-size:.9375rem;">Deep Sleep (15–25%)</strong>
+            <p style="margin-top:.25rem;font-size:.875rem;color:var(--muted);">Slow-wave sleep is when physical repair happens — muscle tissue rebuilds, the glymphatic system flushes metabolic waste from the brain, and growth hormone is released. This is your body's maintenance window.</p>
+          </div>
+          <div>
+            <strong style="color:hsl(275,55%,55%);font-size:.9375rem;">REM Sleep (20–25%)</strong>
+            <p style="margin-top:.25rem;font-size:.875rem;color:var(--muted);">Rapid Eye Movement sleep is when emotional regulation, long-term memory formation, and creative processing occur. Most REM accumulates in the final two hours of a full night — which is why cutting sleep short disproportionately hurts cognition.</p>
+          </div>
+        </div>
+
+        <p>Wello detects stages using a fusion of accelerometer movement patterns (you're almost motionless in Deep sleep), heart rate variability signatures (HRV peaks in Deep and REM), and SpO2 breathing patterns — cross-validating three independent signals for each stage classification.</p>
+      </div>
+      <div>
+        <div class="sleep-visual anim-on-scroll">
+          <div class="hrv-label" style="margin-bottom:1.5rem;">Last Night's Sleep Architecture — 7h 42m</div>
+          <div class="sleep-stages">
+            <div class="sleep-stage">
+              <span class="sleep-stage-label">Awake</span>
+              <div class="sleep-stage-bar stage-awake"></div>
+              <span class="sleep-stage-pct">8%</span>
+            </div>
+            <div class="sleep-stage">
+              <span class="sleep-stage-label">Light</span>
+              <div class="sleep-stage-bar stage-light"></div>
+              <span class="sleep-stage-pct">42%</span>
+            </div>
+            <div class="sleep-stage">
+              <span class="sleep-stage-label">Deep</span>
+              <div class="sleep-stage-bar stage-deep"></div>
+              <span class="sleep-stage-pct">26%</span>
+            </div>
+            <div class="sleep-stage">
+              <span class="sleep-stage-label">REM</span>
+              <div class="sleep-stage-bar stage-rem"></div>
+              <span class="sleep-stage-pct">24%</span>
+            </div>
+          </div>
+          <div class="sleep-summary">
+            <div class="sleep-summary-row">
+              <span>Time asleep</span>
+              <strong>7h 42m</strong>
+            </div>
+            <div class="sleep-summary-row" style="margin-top:.75rem;">
+              <span>Sleep efficiency</span>
+              <strong>92%</strong>
+            </div>
+            <div class="sleep-summary-row" style="margin-top:.75rem;">
+              <span>Cycles completed</span>
+              <strong>5</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 4: SCREENLESS ===== -->
+<section class="sci-section" style="background: var(--dark-bg);">
+  <div class="container">
+    <div class="sci-grid anim-on-scroll">
+      <div class="sci-text">
+        <span class="eyebrow" style="color:var(--primary-soft)">The Screenless Argument</span>
+        <h2 style="color:var(--dark-fg);">The most accurate data comes when you forget the device is there.</h2>
+        <p style="color:rgba(255,255,255,.55)">Smartwatches solve a fundamental tension poorly: they are supposed to improve your health while simultaneously demanding your attention. A screen creates interaction loops — check your steps, dismiss the notification, glance at the time. Each interaction fragment activates the sympathetic nervous system slightly, nudging your HRV down.</p>
+        <p style="color:rgba(255,255,255,.55)">Wello eliminates this contradiction. No haptic buzz at 2 AM. No glowing screen in a dark room. No mid-workout notification. The band is passive — collecting data with zero interface overhead — which also makes it a significantly better data collector. Devices that users take off because they find them annoying produce worse datasets.</p>
+        <p style="color:rgba(255,255,255,.55)">The data surfaces when you choose to look: deliberately, in the app, when you have cognitive space to act on it. This is the difference between health tracking and health intelligence.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1.5rem;">
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:1.5rem;padding:2rem;">
+          <div style="font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:rgba(255,255,255,.3);margin-bottom:1rem;">Typical Smartwatch</div>
+          <div style="display:flex;flex-direction:column;gap:.75rem;">
+            <div style="display:flex;align-items:center;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.5);"><i data-lucide="x" style="width:16px;height:16px;stroke-width:2;color:hsl(5,65%,48%);flex-shrink:0;"></i> Screen interruptions break focus</div>
+            <div style="display:flex;align-items:center;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.5);"><i data-lucide="x" style="width:16px;height:16px;stroke-width:2;color:hsl(5,65%,48%);flex-shrink:0;"></i> Notifications during sleep harm recovery</div>
+            <div style="display:flex;align-items:center;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.5);"><i data-lucide="x" style="width:16px;height:16px;stroke-width:2;color:hsl(5,65%,48%);flex-shrink:0;"></i> Users remove it, gaps in data</div>
+            <div style="display:flex;align-items:center;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.5);"><i data-lucide="x" style="width:16px;height:16px;stroke-width:2;color:hsl(5,65%,48%);flex-shrink:0;"></i> Shallow sensor suite, optimised for step counts</div>
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.15);border-radius:1.5rem;padding:2rem;">
+          <div style="font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:var(--primary-soft);margin-bottom:1rem;">Wello</div>
+          <div style="display:flex;flex-direction:column;gap:.75rem;">
+            <div style="display:flex;align-items:center;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.75);"><i data-lucide="check" style="width:16px;height:16px;stroke-width:2;color:hsl(145,50%,48%);flex-shrink:0;"></i> Zero interruptions — no screen, no notifications</div>
+            <div style="display:flex;align-items:center;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.75);"><i data-lucide="check" style="width:16px;height:16px;stroke-width:2;color:hsl(145,50%,48%);flex-shrink:0;"></i> Worn 24/7 including sleep — continuous data</div>
+            <div style="display:flex;align-items:center;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.75);"><i data-lucide="check" style="width:16px;height:16px;stroke-width:2;color:hsl(145,50%,48%);flex-shrink:0;"></i> 9 medical-grade sensors in a passive form</div>
+            <div style="display:flex;align-items:center;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.75);"><i data-lucide="check" style="width:16px;height:16px;stroke-width:2;color:hsl(145,50%,48%);flex-shrink:0;"></i> Insights on your schedule, not the device's</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section-pad">
+  <div class="container">
+    <div class="cta-band anim-on-scroll">
+      <span class="eyebrow">Start knowing your body</span>
+      <h2>Wello. First Edition.</h2>
+      <p>No waitlist. Ships to all Pakistan addresses. Free delivery. 2-year warranty.</p>
+      <span class="cta-price">Rs 59,990</span>
+      <span class="cta-sub">One-time purchase. Lifetime app access. No subscriptions.</span>
+      <div>
+        <a href="buy.html" class="btn-dark" style="font-size:13px;padding:1rem 2.5rem;">
+          Order Now <i data-lucide="arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <span class="footer-logo">Wello</span>
+        <p class="footer-desc">Health intelligence without the screen. Built for people who want to understand their bodies, not just count their steps.</p>
+      </div>
+      <div>
+        <h5>Product</h5>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="science.html">The Science</a></li>
+          <li><a href="buy.html">Buy Now</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Sale</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Wello Health Technologies Pvt. Ltd.</span>
+      <span>Made in Pakistan</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@0.427.0/dist/umd/lucide.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
